@@ -104,7 +104,7 @@
 <script>
     $(document).ready(function () {
         // Handle the click event for .edit-icon elements
-        $(".edit-icon").on("click", function () {
+        $(document).on("click", ".edit-icon", function () {
             // Get the data-id attribute value
             var dataId = $(this).data("id");
             // Find the closest row (parent tr)
@@ -183,7 +183,7 @@
 
 
     $(document).ready(function () {
-        $(".delete-icon").click(function (e) {
+        $(document).on("click", ".delete-icon", function (e) {
             e.preventDefault(); // Prevent the default link behavior
 
             var dataId = $(this).data("id");
