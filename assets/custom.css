@@ -20,18 +20,24 @@ body{
    right: 20px;
    bottom: 20px;
 }
-.custom-alert{
-    position: absolute;
-    z-index: 2;
-    bottom: -80px;
-    background-color: rgb(204, 248, 196);
-    color: rgb(36, 172, 9);
-    backdrop-filter: blur(10px);
-    border-radius: 5px;
-    padding: 5px 15px;
-    left: 50%;
-    transform: translate(-50%, 0);
+.custom-alert-container{
+  position: absolute;
+  z-index: 2;
+  bottom: -80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+.custom-alert {
+  display: inline-block;
+  background-color: rgb(204, 248, 196);
+  color: rgb(21, 116, 2);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  padding: 5px 15px;
+  margin: auto;
+}
+
 .slide-top {
 	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -76,3 +82,48 @@ body{
   .dataTables_wrapper .dataTables_filter{
     margin-bottom: 5px;
   }
+  .sidebar-left{
+    width: 200px;
+
+  }
+ 
+  .sidebar-left-action-btn{
+    display: none;
+  }
+  @media screen and (max-width: 870px) {
+.sidebar-left{
+  width: 0px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  background: rgb(255,255,255) !important;
+  background: linear-gradient(146deg, rgba(255,255,255,0.3785889355742297) 50%, rgba(0, 140, 255, 0.376) 100%) !important;
+  backdrop-filter: blur(15px);
+}
+.sidebar-left.open{
+  width: 200px;
+  overflow: hidden;
+  transition: 0.3s ease;
+ 
+}
+.sidebar-left-action-btn {
+  display: inline-block;
+  position: absolute;
+  left: 0px;
+  border-radius: 0;
+  margin-top: 2px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  transition: left 0.3s ease; /* Apply the transition property to the 'left' property */
+  z-index: 2;
+}
+
+.sidebar-left-action-btn.open {
+  left: 200px; /* The target state with class 'open' */
+  z-index: 2;
+ 
+}
+
+}

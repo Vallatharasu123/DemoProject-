@@ -287,8 +287,8 @@
                         response.data.last_name,
                         response.data.email,
                         response.data.phone,
-                        '<a href="#" class="btn btn-danger btn-sm delete-icon mx-2" data-id="' + response.data.id + '"><i class="fas fa-trash"></i></a>' +
-                        '<a href="#" class="btn btn-primary btn-sm edit-icon" data-id="' + response.data.id + '"><i class="fas fa-edit"></i></a>'
+                        '<a href="#" class="btn btn-danger btn-sm delete-icon m-1" data-id="' + response.data.id + '"><i class="fas fa-trash"></i></a>' +
+                        '<a href="#" class="btn btn-primary btn-sm edit-icon" m-1 data-id="' + response.data.id + '"><i class="fas fa-edit"></i></a>'
                     ]).draw();
 
                     // Increment the serial number for the next row
@@ -325,8 +325,8 @@
             '<td>' + data.email + '</td>' +
             '<td>' + data.phone + '</td>' +
             '<td>' +
-            '<a href="#" class="btn btn-danger btn-sm delete-icon mx-2" data-id="' + data.id + '"><i class="fas fa-trash"></i></a>' +
-            '<a href="#" class="btn btn-primary btn-sm edit-icon" data-id="' + data.id + '"><i class="fas fa-edit"></i></a>' +
+            '<a href="#" class="btn btn-danger btn-sm delete-icon m-1" data-id="' + data.id + '"><i class="fas fa-trash"></i></a>' +
+            '<a href="#" class="btn btn-primary btn-sm edit-icon" m-1" data-id="' + data.id + '"><i class="fas fa-edit"></i></a>' +
             '</td>' +
             '</tr>';
 
